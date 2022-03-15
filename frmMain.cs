@@ -21,5 +21,10 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
