@@ -1,7 +1,7 @@
 ﻿
 namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
