@@ -33,7 +33,7 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             this.lblTipoPizza = new System.Windows.Forms.Label();
             this.lblQuantita = new System.Windows.Forms.Label();
             this.cmbTipoPizza = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantita = new System.Windows.Forms.TextBox();
             this.btnOrdina = new System.Windows.Forms.Button();
             this.lstRiepilogo = new System.Windows.Forms.ListBox();
             this.lblPizzeMargherite = new System.Windows.Forms.Label();
@@ -57,12 +57,11 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             this.lblEstPizzeria.TabIndex = 0;
             this.lblEstPizzeria.Text = "PIZZERIA";
             this.lblEstPizzeria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblEstPizzeria.Click += new System.EventHandler(this.lblEstPizzeria_Click);
             // 
             // lblTipoPizza
             // 
             this.lblTipoPizza.AutoSize = true;
-            this.lblTipoPizza.Location = new System.Drawing.Point(12, 136);
+            this.lblTipoPizza.Location = new System.Drawing.Point(12, 114);
             this.lblTipoPizza.Name = "lblTipoPizza";
             this.lblTipoPizza.Size = new System.Drawing.Size(75, 15);
             this.lblTipoPizza.TabIndex = 1;
@@ -71,7 +70,7 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             // lblQuantita
             // 
             this.lblQuantita.AutoSize = true;
-            this.lblQuantita.Location = new System.Drawing.Point(12, 185);
+            this.lblQuantita.Location = new System.Drawing.Point(12, 163);
             this.lblQuantita.Name = "lblQuantita";
             this.lblQuantita.Size = new System.Drawing.Size(56, 15);
             this.lblQuantita.TabIndex = 2;
@@ -84,30 +83,31 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             "Pizza Margherita",
             "Pizza Marinara",
             "Pizza Wurstel"});
-            this.cmbTipoPizza.Location = new System.Drawing.Point(97, 133);
+            this.cmbTipoPizza.Location = new System.Drawing.Point(97, 111);
             this.cmbTipoPizza.Name = "cmbTipoPizza";
             this.cmbTipoPizza.Size = new System.Drawing.Size(129, 23);
             this.cmbTipoPizza.TabIndex = 3;
             this.cmbTipoPizza.Text = "Pizza Margherita";
             // 
-            // textBox1
+            // txtQuantita
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtQuantita.Location = new System.Drawing.Point(97, 158);
+            this.txtQuantita.Name = "txtQuantita";
+            this.txtQuantita.Size = new System.Drawing.Size(128, 23);
+            this.txtQuantita.TabIndex = 4;
             // 
             // btnOrdina
             // 
             this.btnOrdina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnOrdina.FlatAppearance.BorderSize = 0;
             this.btnOrdina.ForeColor = System.Drawing.Color.White;
-            this.btnOrdina.Location = new System.Drawing.Point(349, 133);
+            this.btnOrdina.Location = new System.Drawing.Point(349, 111);
             this.btnOrdina.Name = "btnOrdina";
             this.btnOrdina.Size = new System.Drawing.Size(140, 70);
             this.btnOrdina.TabIndex = 5;
             this.btnOrdina.Text = "Ordina";
             this.btnOrdina.UseVisualStyleBackColor = false;
+            this.btnOrdina.Click += new System.EventHandler(this.btnOrdina_Click);
             // 
             // lstRiepilogo
             // 
@@ -154,7 +154,6 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             this.lblQuantitaMargherite.TabIndex = 10;
             this.lblQuantitaMargherite.Text = "0";
             this.lblQuantitaMargherite.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblQuantitaMargherite.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblQuantitaMarinare
             // 
@@ -186,9 +185,9 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             this.grpRiepilogo.Controls.Add(this.lblPizzeMarinare);
             this.grpRiepilogo.Controls.Add(this.lblPizzeMargherite);
             this.grpRiepilogo.Controls.Add(this.lstRiepilogo);
-            this.grpRiepilogo.Location = new System.Drawing.Point(4, 253);
+            this.grpRiepilogo.Location = new System.Drawing.Point(12, 231);
             this.grpRiepilogo.Name = "grpRiepilogo";
-            this.grpRiepilogo.Size = new System.Drawing.Size(485, 173);
+            this.grpRiepilogo.Size = new System.Drawing.Size(477, 173);
             this.grpRiepilogo.TabIndex = 13;
             this.grpRiepilogo.TabStop = false;
             this.grpRiepilogo.Text = "Riepilogo";
@@ -198,10 +197,10 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(213)))), ((int)(((byte)(158)))));
-            this.ClientSize = new System.Drawing.Size(501, 439);
+            this.ClientSize = new System.Drawing.Size(501, 424);
             this.Controls.Add(this.grpRiepilogo);
             this.Controls.Add(this.btnOrdina);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantita);
             this.Controls.Add(this.cmbTipoPizza);
             this.Controls.Add(this.lblQuantita);
             this.Controls.Add(this.lblTipoPizza);
@@ -221,7 +220,7 @@ namespace AS2122_3G_INF_IngrassiaSamuele_Pizzeria
         private System.Windows.Forms.Label lblTipoPizza;
         private System.Windows.Forms.Label lblQuantita;
         private System.Windows.Forms.ComboBox cmbTipoPizza;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantita;
         private System.Windows.Forms.Button btnOrdina;
         private System.Windows.Forms.ListBox lstRiepilogo;
         private System.Windows.Forms.Label lblPizzeMargherite;
